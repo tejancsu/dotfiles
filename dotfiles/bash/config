@@ -1,0 +1,8 @@
+#colors
+NO_COLOR='\e[0m' 
+WHITE='\e[0;37m'
+EBLACK='\e[1;30m'
+ERED='\e[1;31m'
+GREEN='\e[0;32m'
+
+PS1="\n\[$GREEN\]\w \[$EBLACK\]\$(vcprompt)\n\[$ERED\]\u\[$NO_COLOR\]$\[$NO_COLOR\]"

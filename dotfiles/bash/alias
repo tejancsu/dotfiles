@@ -1,0 +1,20 @@
+
+#Basic
+alias ..="cd .."
+alias cdd="cd -"
+alias c="clear"
+alias ll="ls -l"
+alias ls='ls -G'
+
+
+#Misc
+alias tu="top -o cpu" #cpu
+alias tm="top -o vsize" #memory
+
+#GIT
+alias gs="git status"
+
+
+#Rails
+alias ss="./script/server"
+alias sc="./script/console"
