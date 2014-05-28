@@ -3,18 +3,49 @@
 alias ..="cd .."
 alias cdd="cd -"
 alias c="clear"
-alias ll="ls -l"
-alias ls='ls -G'
-
+alias ll="ls -lF | more"
+alias l='ls -F '
+alias less="less -R"
+alias grep="grep --color=auto"
+alias cdo="cd ~/orders"
+alias cdg="cd ~/groupon"
+alias cdh="cd ~/"
+function ff(){
+  find . -name $1;
+}
 
 #Misc
 alias tu="top -o cpu" #cpu
 alias tm="top -o vsize" #memory
+alias src="source ~/.bashrc"
+alias eali="subl ~/bin/dotfiles/bash/alias"
+alias econ="subl ~/bin/dotfiles/bash/config"
+alias eenv="subl ~/bin/dotfiles/bash/env"
+alias h="history"
+alias ha="history -a"
+alias hr="history -n"
+alias msql="mysql -u root groupon_development"
+alias lf="ls -l | egrep -v '^d'"
+alias ldir="ls -l | egrep '^d'"
+alias osv="ls ~/ops-config/hosts/ | grep orders.*"
 
 #GIT
 alias gs="git status"
-
+alias gl="git log"
+alias glo="git log --oneline --decorate"
+alias gca="git commit -a"
+alias gc="git commit "
+alias ggrep="git grep -n"  #searches all the directory tree
+alias gco="git checkout"
+alias gb="git branch"
+alias gd="git diff"
+alias gcad="git commit --amend --reset-author"
+alias gfr="git fetch && git rebase origin/master"
+alias gtb="gb -r | cut -c3- | egrep "origin/test/tsudha"| sed 's/^origin\/\(.*\)$/\1/' | xargs -n 1 git push origin --delete"
 
 #Rails
 alias ss="./script/server"
 alias sc="./script/console"
+function spek(){
+  script/spec $1 --format nested --color --debug;
+}
